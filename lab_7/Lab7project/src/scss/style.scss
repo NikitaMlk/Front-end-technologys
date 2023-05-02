@@ -1,0 +1,122 @@
+$primary-color: #365a72;
+$secondary-color: #0e171d;
+$tertiary-color: #5e9dc7;
+$accent-color: #e9eeef;
+$fixed-width: 960px;
+
+
+
+html {
+  height: 100%;
+}
+
+body {
+  background: $primary-color;
+  color: $secondary-color;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: $tertiary-color;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: $secondary-color;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    li {
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        &:hover {
+          background-color: #a6bcbe;
+        }
+      }
+    }
+  }
+  margin-bottom: 20px;
+}
+
+img {
+  vertical-align: left;
+}
+
+main {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: $tertiary-color;
+  section {
+    margin: 10px 0;
+    display: inline-block;
+    vertical-align: middle;
+    h2 {
+      color: $accent-color;
+    }
+    p {
+      color: $accent-color;
+    }
+  }
+  margin-bottom: 40px;
+}
+
+
+footer {
+  background-color: $tertiary-color;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
+}
+
+
+@media screen and (max-width: $fixed-width) {
+  main {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: $fixed-width) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    ul {
+      flex-direction: column;
+      justify-content: center;
+      li {
+        width: 100%;
+        text-align: center;
+        a {
+          display: block;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+  header {
+    height: auto;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  header::before {
+    content: "This website may not display correctly in Internet Explorer 10 and lower. Please upgrade your browser.";
+    background-color: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+}

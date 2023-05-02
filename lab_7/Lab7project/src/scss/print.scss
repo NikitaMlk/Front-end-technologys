@@ -1,0 +1,40 @@
+@media print {/* Remove all background images and colors */
+* {
+  background: none !important;
+  color: black !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+}
+
+/* Display full URL instead of hypertext links */
+a::after {
+  content: " (" attr(href) ")";
+}
+
+/* Display site name, title and page content when printing */
+body {
+  padding-top: 0 !important;
+}
+
+header, nav, main, footer {
+  display: none !important;
+}
+
+.site-name {
+  display: block;
+}
+
+.site-title {
+  display: block;
+}
+
+.page-content {
+  display: block;
+}
+
+/* Provide output using serif fonts */
+body {
+  font-family: "Times New Roman", Times, serif !important;
+}
+}
